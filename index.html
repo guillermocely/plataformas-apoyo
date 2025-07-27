@@ -3,216 +3,598 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plataformas de Materiales de Apoyo</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Materiales de Apoyo - Desarrollo de Software</title>
+    <link rel="stylesheet" href="materiales.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1><i class="fas fa-graduation-cap"></i> Plataformas de Apoyo Educativo</h1>
-            <p>Accede rápidamente a tus recursos de aprendizaje favoritos</p>
+            <h1><i class="fas fa-folder-open"></i> Materiales de Apoyo</h1>
+            <p>Desarrollo de Software - Guillermo Cely</p>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Buscar material...">
+                <i class="fas fa-search"></i>
+            </div>
         </div>
     </header>
 
+    <nav class="phase-nav">
+        <div class="container">
+            <button class="nav-btn active" data-phase="all">
+                <i class="fas fa-th-large"></i> Todas las Fases
+            </button>
+            <button class="nav-btn" data-phase="fase1">
+                <i class="fas fa-search"></i> Fase 1: Análisis
+            </button>
+            <button class="nav-btn" data-phase="fase2">
+                <i class="fas fa-drafting-compass"></i> Fase 2: Planeación
+            </button>
+            <button class="nav-btn" data-phase="fase3">
+                <i class="fas fa-code"></i> Fase 3: Ejecución
+            </button>
+            <button class="nav-btn" data-phase="fase4">
+                <i class="fas fa-check-circle"></i> Fase 4: Evaluación
+            </button>
+        </div>
+    </nav>
+
     <main class="container">
-        <section class="platforms-grid">
-            <!-- Plataformas de Cursos Online -->
-            <div class="category">
-                <h2><i class="fas fa-laptop-code"></i> Cursos Online</h2>
-                <div class="platform-cards">
-                    <div class="platform-card">
-                        <div class="card-icon">
-                            <i class="fab fa-youtube" style="color: #FF0000;"></i>
-                        </div>
-                        <h3>YouTube Educativo</h3>
-                        <p>Videos educativos y tutoriales gratuitos</p>
-                        <a href="https://www.youtube.com/results?search_query=programacion+tutorial" target="_blank" class="btn">
-                            <i class="fas fa-external-link-alt"></i> Acceder
-                        </a>
+        <!-- Fase 1: Análisis -->
+        <section class="phase-section" data-phase="fase1">
+            <div class="phase-header">
+                <h2><i class="fas fa-search"></i> Fase 1: Análisis</h2>
+                <p>Materiales de análisis de requisitos y metodologías</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3><i class="fas fa-folder"></i> Proyecto 1</h3>
+                        <span class="file-count">30+ archivos</span>
                     </div>
-
-                    <div class="platform-card">
-                        <div class="card-icon">
-                            <i class="fas fa-code" style="color: #4CAF50;"></i>
+                    <div class="project-content">
+                        <div class="materials-section">
+                            <h4><i class="fas fa-book"></i> Material de Aprendizaje</h4>
+                            <div class="material-links">
+                                <a href="../1 Fase   analisis/proyecto 1/material aprendizaje/1-Caracterización de procesos" class="material-link">
+                                    <i class="fas fa-sitemap"></i> Caracterización de procesos
+                                </a>
+                                <a href="../1 Fase   analisis/proyecto 1/material aprendizaje/2-Ingeniería de requisitos" class="material-link">
+                                    <i class="fas fa-cogs"></i> Ingeniería de requisitos
+                                </a>
+                                <a href="../1 Fase   analisis/proyecto 1/material aprendizaje/3-La fase de elicitación de requisitos" class="material-link">
+                                    <i class="fas fa-comments"></i> Elicitación de requisitos
+                                </a>
+                                <a href="../1 Fase   analisis/proyecto 1/material aprendizaje/4-Análisis y especificación de requisitos" class="material-link">
+                                    <i class="fas fa-clipboard-list"></i> Análisis y especificación
+                                </a>
+                                <a href="../1 Fase   analisis/proyecto 1/material aprendizaje/5-Validación de requisitos" class="material-link">
+                                    <i class="fas fa-check-double"></i> Validación de requisitos
+                                </a>
+                                <a href="../1 Fase   analisis/proyecto 1/material aprendizaje/6-Metodologías de desarrollo de software" class="material-link">
+                                    <i class="fas fa-project-diagram"></i> Metodologías de desarrollo
+                                </a>
+                                <a href="../1 Fase   analisis/proyecto 1/material aprendizaje/7-Tecnologías de la información y la comunicación (TIC)" class="material-link">
+                                    <i class="fas fa-laptop-code"></i> TIC
+                                </a>
+                            </div>
                         </div>
-                        <h3>Khan Academy</h3>
-                        <p>Educación gratuita de calidad mundial</p>
-                        <a href="https://es.khanacademy.org/" target="_blank" class="btn">
-                            <i class="fas fa-external-link-alt"></i> Acceder
-                        </a>
+                        <div class="documents-section">
+                            <h4><i class="fas fa-file-alt"></i> Documentos y Evidencias</h4>
+                            <button class="toggle-docs" onclick="toggleDocuments(this)">
+                                <i class="fas fa-eye"></i> Ver documentos
+                            </button>
+                            <div class="documents-list" style="display: none;">
+                                <a href="../1 Fase   analisis/proyecto 1/GA1-220501092-AA1-EV01.docx" class="doc-link">
+                                    <i class="fas fa-file-word"></i> GA1-220501092-AA1-EV01.docx
+                                </a>
+                                <a href="../1 Fase   analisis/proyecto 1/historia de las tic.docx" class="doc-link">
+                                    <i class="fas fa-file-word"></i> Historia de las TIC
+                                </a>
+                                <a href="../1 Fase   analisis/proyecto 1/Mapa conceptual.docx" class="doc-link">
+                                    <i class="fas fa-file-word"></i> Mapa conceptual
+                                </a>
+                            </div>
+                        </div>
                     </div>
+                </div>
 
-                    <div class="platform-card">
-                        <div class="card-icon">
-                            <i class="fas fa-certificate" style="color: #0056D3;"></i>
-                        </div>
-                        <h3>Coursera</h3>
-                        <p>Cursos universitarios y certificaciones</p>
-                        <a href="https://www.coursera.org/" target="_blank" class="btn">
-                            <i class="fas fa-external-link-alt"></i> Acceder
-                        </a>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3><i class="fas fa-folder"></i> Proyecto 2</h3>
+                        <span class="file-count">35+ archivos</span>
                     </div>
-
-                    <div class="platform-card">
-                        <div class="card-icon">
-                            <i class="fas fa-play-circle" style="color: #A435F0;"></i>
+                    <div class="project-content">
+                        <div class="materials-section">
+                            <h4><i class="fas fa-book"></i> Material de Aprendizaje</h4>
+                            <div class="material-links">
+                                <a href="../1 Fase   analisis/proyecto 2/material de aprendizaje/1-Diagramas para la especificación y análisis de requisitos" class="material-link">
+                                    <i class="fas fa-project-diagram"></i> Diagramas para especificación y análisis
+                                </a>
+                                <a href="../1 Fase   analisis/proyecto 2/material de aprendizaje/2-Diseño del modelo conceptual bajo el paradigma orientado a objetos" class="material-link">
+                                    <i class="fas fa-cube"></i> Modelo conceptual orientado a objetos
+                                </a>
+                                <a href="../1 Fase   analisis/proyecto 2/material de aprendizaje/3-Validación de documentos" class="material-link">
+                                    <i class="fas fa-check-circle"></i> Validación de documentos
+                                </a>
+                                <a href="../1 Fase   analisis/proyecto 2/material de aprendizaje/4-Especificaciones de software" class="material-link">
+                                    <i class="fas fa-file-code"></i> Especificaciones de software
+                                </a>
+                                <a href="../1 Fase   analisis/proyecto 2/material de aprendizaje/5-Propuesta técnica" class="material-link">
+                                    <i class="fas fa-clipboard-check"></i> Propuesta técnica
+                                </a>
+                            </div>
                         </div>
-                        <h3>Udemy</h3>
-                        <p>Cursos prácticos y especializados</p>
-                        <a href="https://www.udemy.com/" target="_blank" class="btn">
-                            <i class="fas fa-external-link-alt"></i> Acceder
-                        </a>
+                        <div class="documents-section">
+                            <h4><i class="fas fa-file-alt"></i> Documentos y Evidencias</h4>
+                            <button class="toggle-docs" onclick="toggleDocuments(this)">
+                                <i class="fas fa-eye"></i> Ver documentos
+                            </button>
+                            <div class="documents-list" style="display: none;">
+                                <a href="../1 Fase   analisis/proyecto 2/Diagramas y documentación de actividades del proyecto.docx" class="doc-link">
+                                    <i class="fas fa-file-word"></i> Diagramas y documentación de actividades
+                                </a>
+                                <a href="../1 Fase   analisis/proyecto 2/elaboración de diagramas y plantillas para casos de uso del.docx" class="doc-link">
+                                    <i class="fas fa-file-word"></i> Diagramas y plantillas casos de uso
+                                </a>
+                                <a href="../1 Fase   analisis/proyecto 2/elaboración del informe de análisis con listas de chequeo.docx" class="doc-link">
+                                    <i class="fas fa-file-word"></i> Informe de análisis con listas de chequeo
+                                </a>
+                                <a href="../1 Fase   analisis/proyecto 2/mapa conceptual sobre validación de documentos.docx" class="doc-link">
+                                    <i class="fas fa-file-word"></i> Mapa conceptual validación
+                                </a>
+                                <a href="../1 Fase   analisis/proyecto 2/diseño de las fichas técnicas para la recolección de la.docx" class="doc-link">
+                                    <i class="fas fa-file-word"></i> Fichas técnicas recolección
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Plataformas de Programación -->
-            <div class="category">
-                <h2><i class="fas fa-terminal"></i> Programación</h2>
-                <div class="platform-cards">
-                    <div class="platform-card">
-                        <div class="card-icon">
-                            <i class="fab fa-github" style="color: #333;"></i>
-                        </div>
-                        <h3>GitHub</h3>
-                        <p>Repositorios de código y colaboración</p>
-                        <a href="https://github.com/" target="_blank" class="btn">
-                            <i class="fas fa-external-link-alt"></i> Acceder
-                        </a>
+        <!-- Fase 2: Planeación -->
+        <section class="phase-section" data-phase="fase2">
+            <div class="phase-header">
+                <h2><i class="fas fa-drafting-compass"></i> Fase 2: Planeación</h2>
+                <p>Materiales de diseño y planificación del proyecto</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3><i class="fas fa-folder"></i> Proyecto 3</h3>
+                        <span class="file-count">12+ archivos</span>
                     </div>
-
-                    <div class="platform-card">
-                        <div class="card-icon">
-                            <i class="fas fa-code-branch" style="color: #FF6B35;"></i>
+                    <div class="project-content">
+                        <div class="materials-section">
+                            <h4><i class="fas fa-book"></i> Material de Aprendizaje</h4>
+                            <div class="material-links">
+                                <a href="../2 Fase  planeacion/proyecto 3/material de aprendizaje/1-Introducción a la algoritmia" class="material-link">
+                                    <i class="fas fa-code"></i> Introducción a la algoritmia
+                                </a>
+                                <a href="../2 Fase  planeacion/proyecto 3/material de aprendizaje/2-Análisis y solución de problemas aplicando algoritmos" class="material-link">
+                                    <i class="fas fa-puzzle-piece"></i> Análisis y solución de problemas
+                                </a>
+                                <a href="../2 Fase  planeacion/proyecto 3/material de aprendizaje/3-Codificación de algoritmos" class="material-link">
+                                    <i class="fas fa-terminal"></i> Codificación de algoritmos
+                                </a>
+                                <a href="../2 Fase  planeacion/proyecto 3/material de aprendizaje/4-La ciencia de las cosas" class="material-link">
+                                    <i class="fas fa-flask"></i> La ciencia de las cosas
+                                </a>
+                            </div>
                         </div>
-                        <h3>Codecademy</h3>
-                        <p>Aprende a programar interactivamente</p>
-                        <a href="https://www.codecademy.com/" target="_blank" class="btn">
-                            <i class="fas fa-external-link-alt"></i> Acceder
-                        </a>
+                        <div class="documents-section">
+                            <h4><i class="fas fa-file-alt"></i> Documentos y Evidencias</h4>
+                            <button class="toggle-docs" onclick="toggleDocuments(this)">
+                                <i class="fas fa-eye"></i> Ver documentos
+                            </button>
+                            <div class="documents-list" style="display: none;">
+                                <a href="../2 Fase  planeacion/proyecto 3/GA3-220501093-AA1-EV01.docx" class="doc-link">
+                                    <i class="fas fa-file-word"></i> GA3-220501093-AA1-EV01
+                                </a>
+                                <a href="../2 Fase  planeacion/proyecto 3/GA3-220501093-AA1-EV02.docx" class="doc-link">
+                                    <i class="fas fa-file-word"></i> GA3-220501093-AA1-EV02
+                                </a>
+                                <a href="../2 Fase  planeacion/proyecto 3/GA3-220501093-AA2-EV01.docx" class="doc-link">
+                                    <i class="fas fa-file-word"></i> GA3-220501093-AA2-EV01
+                                </a>
+                                <a href="../2 Fase  planeacion/proyecto 3/GA3-220501093-AA3-EV01.docx" class="doc-link">
+                                    <i class="fas fa-file-word"></i> GA3-220501093-AA3-EV01
+                                </a>
+                                <a href="../2 Fase  planeacion/proyecto 3/GA3-220501093-AA2-EV03.zip" class="doc-link">
+                                    <i class="fas fa-file-archive"></i> GA3-220501093-AA2-EV03.zip
+                                </a>
+                            </div>
+                        </div>
                     </div>
+                </div>
 
-                    <div class="platform-card">
-                        <div class="card-icon">
-                            <i class="fas fa-puzzle-piece" style="color: #1E88E5;"></i>
-                        </div>
-                        <h3>HackerRank</h3>
-                        <p>Desafíos de programación y práctica</p>
-                        <a href="https://www.hackerrank.com/" target="_blank" class="btn">
-                            <i class="fas fa-external-link-alt"></i> Acceder
-                        </a>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3><i class="fas fa-folder"></i> Proyecto 4</h3>
+                        <span class="file-count">30+ archivos</span>
                     </div>
-
-                    <div class="platform-card">
-                        <div class="card-icon">
-                            <i class="fas fa-fire" style="color: #FF9800;"></i>
+                    <div class="project-content">
+                        <div class="materials-section">
+                            <h4><i class="fas fa-book"></i> Material de Aprendizaje</h4>
+                            <div class="material-links">
+                                <a href="../2 Fase  planeacion/proyecto 4/material/1-Conceptos generales de bases de datos" class="material-link">
+                                    <i class="fas fa-database"></i> Conceptos generales de bases de datos
+                                </a>
+                                <a href="../2 Fase  planeacion/proyecto 4/material/2-Conceptos básicos programación orientada a objetos" class="material-link">
+                                    <i class="fas fa-cube"></i> Programación orientada a objetos
+                                </a>
+                                <a href="../2 Fase  planeacion/proyecto 4/material/3-Diseño del modelo conceptual bajo el paradigma orientado a objetos" class="material-link">
+                                    <i class="fas fa-sitemap"></i> Modelo conceptual orientado a objetos
+                                </a>
+                                <a href="../2 Fase  planeacion/proyecto 4/material/4-Diseño de patrones de software" class="material-link">
+                                    <i class="fas fa-puzzle-piece"></i> Patrones de software
+                                </a>
+                                <a href="../2 Fase  planeacion/proyecto 4/material/5-Conceptos, tecnologías y arquitectura para el desarrollo web" class="material-link">
+                                    <i class="fas fa-globe"></i> Desarrollo web y arquitectura
+                                </a>
+                                <a href="../2 Fase  planeacion/proyecto 4/material/6-Validación de documentos" class="material-link">
+                                    <i class="fas fa-check-circle"></i> Validación de documentos
+                                </a>
+                            </div>
                         </div>
-                        <h3>FreeCodeCamp</h3>
-                        <p>Aprende desarrollo web gratis</p>
-                        <a href="https://www.freecodecamp.org/" target="_blank" class="btn">
-                            <i class="fas fa-external-link-alt"></i> Acceder
-                        </a>
+                        <div class="documents-section">
+                            <h4><i class="fas fa-file-alt"></i> Documentos y Evidencias</h4>
+                            <button class="toggle-docs" onclick="toggleDocuments(this)">
+                                <i class="fas fa-eye"></i> Ver documentos
+                            </button>
+                            <div class="documents-list" style="display: none;">
+                                <a href="../2 Fase  planeacion/proyecto 4/IDENTIFICAR ENTIDADES Y RELACIONES PLANTEADAS.docx" class="doc-link">
+                                    <i class="fas fa-file-word"></i> Identificar entidades y relaciones
+                                </a>
+                                <a href="../2 Fase  planeacion/proyecto 4/INFORME DE ENTREGABLES PARA EL PROYECTO DE.docx" class="doc-link">
+                                    <i class="fas fa-file-word"></i> Informe de entregables del proyecto
+                                </a>
+                                <a href="../2 Fase  planeacion/proyecto 4/GA4-220501095-AA2-EV02.docx" class="doc-link">
+                                    <i class="fas fa-file-word"></i> GA4-220501095-AA2-EV02
+                                </a>
+                                <a href="../2 Fase  planeacion/proyecto 4/GA4-220501095-AA2-EV05.docx" class="doc-link">
+                                    <i class="fas fa-file-word"></i> GA4-220501095-AA2-EV05
+                                </a>
+                                <a href="../2 Fase  planeacion/proyecto 4/GA4-220501095-AA4-EV02.docx" class="doc-link">
+                                    <i class="fas fa-file-word"></i> GA4-220501095-AA4-EV02
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3><i class="fas fa-folder"></i> Proyecto 5</h3>
+                        <span class="file-count">15+ archivos</span>
+                    </div>
+                    <div class="project-content">
+                        <div class="materials-section">
+                            <h4><i class="fas fa-book"></i> Material de Aprendizaje</h4>
+                            <div class="material-links">
+                                <a href="../2 Fase  planeacion/proyecto 5/material/Diseño aplicación web" class="material-link">
+                                    <i class="fas fa-desktop"></i> Diseño aplicación web
+                                </a>
+                                <a href="../2 Fase  planeacion/proyecto 5/material/Diseño y construcción de frontend" class="material-link">
+                                    <i class="fas fa-paint-brush"></i> Diseño y construcción de frontend
+                                </a>
+                                <a href="../2 Fase  planeacion/proyecto 5/material/Fundamentos de investigación" class="material-link">
+                                    <i class="fas fa-search"></i> Fundamentos de investigación
+                                </a>
+                            </div>
+                        </div>
+                        <div class="documents-section">
+                            <h4><i class="fas fa-file-alt"></i> Documentos y Evidencias</h4>
+                            <button class="toggle-docs" onclick="toggleDocuments(this)">
+                                <i class="fas fa-eye"></i> Ver documentos
+                            </button>
+                            <div class="documents-list" style="display: none;">
+                                <a href="../2 Fase  planeacion/proyecto 5/Maquetación de la interfaz gráfica en HTML.docx" class="doc-link">
+                                    <i class="fas fa-file-word"></i> Maquetación interfaz gráfica HTML
+                                </a>
+                                <a href="../2 Fase  planeacion/proyecto 5/Nociones de reglas de usabilidad y accesibilidad en aplicaciones independientes.docx" class="doc-link">
+                                    <i class="fas fa-file-word"></i> Reglas de usabilidad y accesibilidad
+                                </a>
+                                <a href="../2 Fase  planeacion/proyecto 5/Taller sobre construcción del prototipo del software de acuerdo al análisis de las características funcional.docx" class="doc-link">
+                                    <i class="fas fa-file-word"></i> Taller construcción de prototipo
+                                </a>
+                                <a href="../2 Fase  planeacion/proyecto 5/GA5-220501095-AA1-EV03.docx" class="doc-link">
+                                    <i class="fas fa-file-word"></i> GA5-220501095-AA1-EV03
+                                </a>
+                                <a href="../2 Fase  planeacion/proyecto 5/GA5-220501095-AA1-EV07.docx" class="doc-link">
+                                    <i class="fas fa-file-word"></i> GA5-220501095-AA1-EV07
+                                </a>
+                                <a href="../2 Fase  planeacion/proyecto 5/GA5-220501095-AA1-EV08.docx" class="doc-link">
+                                    <i class="fas fa-file-word"></i> GA5-220501095-AA1-EV08
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Recursos Académicos -->
-            <div class="category">
-                <h2><i class="fas fa-university"></i> Recursos Académicos</h2>
-                <div class="platform-cards">
-                    <div class="platform-card">
-                        <div class="card-icon">
-                            <i class="fas fa-book-open" style="color: #E91E63;"></i>
-                        </div>
-                        <h3>SENA Sofia Plus</h3>
-                        <p>Plataforma educativa del SENA</p>
-                        <a href="https://oferta.senasofiaplus.edu.co/" target="_blank" class="btn">
-                            <i class="fas fa-external-link-alt"></i> Acceder
-                        </a>
+        <!-- Fase 3: Ejecución -->
+        <section class="phase-section" data-phase="fase3">
+            <div class="phase-header">
+                <h2><i class="fas fa-code"></i> Fase 3: Ejecución</h2>
+                <p>Implementación y desarrollo del software</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3><i class="fas fa-folder"></i> Actividad Proyecto 6</h3>
+                        <span class="file-count">10+ archivos</span>
                     </div>
-
-                    <div class="platform-card">
-                        <div class="card-icon">
-                            <i class="fas fa-globe" style="color: #2196F3;"></i>
+                    <div class="project-content">
+                        <div class="materials-section">
+                            <h4><i class="fas fa-book"></i> Material de Aprendizaje</h4>
+                            <div class="material-links">
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 6/material/Arquitectura de aplicaciones móviles nativas" class="material-link">
+                                    <i class="fas fa-mobile-alt"></i> Arquitectura aplicaciones móviles nativas
+                                </a>
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 6/material/Bases de datos NoSQL" class="material-link">
+                                    <i class="fas fa-database"></i> Bases de datos NoSQL
+                                </a>
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 6/material/Diseño de interfaces Web" class="material-link">
+                                    <i class="fas fa-desktop"></i> Diseño de interfaces Web
+                                </a>
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 6/material/Herramientas para el diseño y desarrollo móvil híbrido" class="material-link">
+                                    <i class="fas fa-tools"></i> Desarrollo móvil híbrido
+                                </a>
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 6/material/Implementación y manipulación de bases de datos relacionales" class="material-link">
+                                    <i class="fas fa-table"></i> Bases de datos relacionales
+                                </a>
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 6/material/Modelo entidad relación" class="material-link">
+                                    <i class="fas fa-project-diagram"></i> Modelo entidad relación
+                                </a>
+                            </div>
                         </div>
-                        <h3>Wikipedia</h3>
-                        <p>Enciclopedia libre y colaborativa</p>
-                        <a href="https://es.wikipedia.org/" target="_blank" class="btn">
-                            <i class="fas fa-external-link-alt"></i> Acceder
-                        </a>
+                        <div class="documents-section">
+                            <h4><i class="fas fa-file-alt"></i> Documentos y Evidencias</h4>
+                            <button class="toggle-docs" onclick="toggleDocuments(this)">
+                                <i class="fas fa-eye"></i> Ver documentos
+                            </button>
+                            <div class="documents-list" style="display: none;">
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 6/GA6-220501096-AA4-EV02 ESTABLECER LOS COMPONENTES FRONTEND DE LA APLICACIÓN WEB.docx" class="doc-link">
+                                    <i class="fas fa-file-word"></i> Componentes Frontend Aplicación Web
+                                </a>
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 6/proyecto-sistema-gestion-de-biblioteca" class="doc-link">
+                                    <i class="fas fa-folder"></i> Sistema Gestión de Biblioteca
+                                </a>
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 6/GA6-220501096-AA4-EV01.zip" class="doc-link">
+                                    <i class="fas fa-file-archive"></i> GA6-220501096-AA4-EV01.zip
+                                </a>
+                            </div>
+                        </div>
                     </div>
+                </div>
 
-                    <div class="platform-card">
-                        <div class="card-icon">
-                            <i class="fas fa-file-pdf" style="color: #DC143C;"></i>
-                        </div>
-                        <h3>Academia.edu</h3>
-                        <p>Artículos académicos y papers</p>
-                        <a href="https://www.academia.edu/" target="_blank" class="btn">
-                            <i class="fas fa-external-link-alt"></i> Acceder
-                        </a>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3><i class="fas fa-folder"></i> Actividad Proyecto 7</h3>
+                        <span class="file-count">20+ archivos</span>
                     </div>
-
-                    <div class="platform-card">
-                        <div class="card-icon">
-                            <i class="fas fa-language" style="color: #58CC02;"></i>
+                    <div class="project-content">
+                        <div class="materials-section">
+                            <h4><i class="fas fa-book"></i> Material de Aprendizaje</h4>
+                            <div class="material-links">
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 7/material/Aplicación del paradigma orientado a objetos" class="material-link">
+                                    <i class="fas fa-cube"></i> Paradigma orientado a objetos
+                                </a>
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 7/material/Construcción aplicación web" class="material-link">
+                                    <i class="fas fa-globe"></i> Construcción aplicación web
+                                </a>
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 7/material/Construcción de API" class="material-link">
+                                    <i class="fas fa-cogs"></i> Construcción de API
+                                </a>
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 7/material/Construcción de aplicaciones con Java" class="material-link">
+                                    <i class="fab fa-java"></i> Aplicaciones con Java
+                                </a>
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 7/material/Desarrollo de Front-end con REACT JS" class="material-link">
+                                    <i class="fab fa-react"></i> Front-end con React JS
+                                </a>
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 7/material/Las pruebas de software" class="material-link">
+                                    <i class="fas fa-bug"></i> Pruebas de software
+                                </a>
+                            </div>
                         </div>
-                        <h3>Duolingo</h3>
-                        <p>Aprende idiomas de forma divertida</p>
-                        <a href="https://www.duolingo.com/" target="_blank" class="btn">
-                            <i class="fas fa-external-link-alt"></i> Acceder
-                        </a>
+                        <div class="documents-section">
+                            <h4><i class="fas fa-file-alt"></i> Documentos y Evidencias</h4>
+                            <button class="toggle-docs" onclick="toggleDocuments(this)">
+                                <i class="fas fa-eye"></i> Ver documentos
+                            </button>
+                            <div class="documents-list" style="display: none;">
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 7/Taller sobre componentes frontend.docx" class="doc-link">
+                                    <i class="fas fa-file-word"></i> Taller componentes frontend
+                                </a>
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 7/GA7-220501096-AA1-EV03.docx" class="doc-link">
+                                    <i class="fas fa-file-word"></i> GA7-220501096-AA1-EV03
+                                </a>
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 7/GA7-220501096-AA1-EV04.docx" class="doc-link">
+                                    <i class="fas fa-file-word"></i> GA7-220501096-AA1-EV04
+                                </a>
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 7/GA7-220501096-AA4-EV03.docx" class="doc-link">
+                                    <i class="fas fa-file-word"></i> GA7-220501096-AA4-EV03
+                                </a>
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 7/sarah_guillermo_AA5_EV04.7z" class="doc-link">
+                                    <i class="fas fa-file-archive"></i> Proyecto Final AA5_EV04
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3><i class="fas fa-folder"></i> Actividad Proyecto 8</h3>
+                        <span class="file-count">18+ archivos</span>
+                    </div>
+                    <div class="project-content">
+                        <div class="materials-section">
+                            <h4><i class="fas fa-book"></i> Material de Aprendizaje</h4>
+                            <div class="material-links">
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 8/material/Actividades de documentación y entrega de software en procesos de implantación" class="material-link">
+                                    <i class="fas fa-file-contract"></i> Documentación y entrega de software
+                                </a>
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 8/material/Conceptos básicos de redes y networking" class="material-link">
+                                    <i class="fas fa-network-wired"></i> Redes y networking
+                                </a>
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 8/material/Contenedores" class="material-link">
+                                    <i class="fab fa-docker"></i> Contenedores
+                                </a>
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 8/material/Gestión de redundancia y alta disponibilidad" class="material-link">
+                                    <i class="fas fa-server"></i> Redundancia y alta disponibilidad
+                                </a>
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 8/material/Publicación de aplicaciones tradicionales" class="material-link">
+                                    <i class="fas fa-upload"></i> Publicación de aplicaciones
+                                </a>
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 8/material/Virtualización" class="material-link">
+                                    <i class="fas fa-cloud"></i> Virtualización
+                                </a>
+                            </div>
+                        </div>
+                        <div class="documents-section">
+                            <h4><i class="fas fa-file-alt"></i> Documentos y Evidencias</h4>
+                            <button class="toggle-docs" onclick="toggleDocuments(this)">
+                                <i class="fas fa-eye"></i> Ver documentos
+                            </button>
+                            <div class="documents-list" style="display: none;">
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 8/Presentación1.pptx" class="doc-link">
+                                    <i class="fas fa-file-powerpoint"></i> Presentación Principal
+                                </a>
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 8/Presentación1.mp4" class="doc-link">
+                                    <i class="fas fa-video"></i> Video Presentación
+                                </a>
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 8/GA8-220601501-AA2-EV01.pptx" class="doc-link">
+                                    <i class="fas fa-file-powerpoint"></i> GA8-220601501-AA2-EV01
+                                </a>
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 8/GA8-220501096-AA2-EV01.zip" class="doc-link">
+                                    <i class="fas fa-file-archive"></i> GA8-220501096-AA2-EV01.zip
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3><i class="fas fa-folder"></i> Actividad Proyecto 9</h3>
+                        <span class="file-count">5 archivos</span>
+                    </div>
+                    <div class="project-content">
+                        <div class="documents-section">
+                            <h4><i class="fas fa-file-alt"></i> Documentos y Evidencias</h4>
+                            <button class="toggle-docs" onclick="toggleDocuments(this)">
+                                <i class="fas fa-eye"></i> Ver documentos
+                            </button>
+                            <div class="documents-list" style="display: none;">
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 9/GA9-220501096-AA1-EV02.docx" class="doc-link">
+                                    <i class="fas fa-file-word"></i> GA9-220501096-AA1-EV02
+                                </a>
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 9/GA9-220501096-AA2-EV01.xlsx" class="doc-link">
+                                    <i class="fas fa-file-excel"></i> GA9-220501096-AA2-EV01
+                                </a>
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 9/4" class="doc-link">
+                                    <i class="fas fa-folder"></i> Carpeta 4
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3><i class="fas fa-folder"></i> Actividad Proyecto 10</h3>
+                        <span class="file-count">13 archivos</span>
+                    </div>
+                    <div class="project-content">
+                        <div class="documents-section">
+                            <h4><i class="fas fa-file-alt"></i> Documentos y Evidencias</h4>
+                            <button class="toggle-docs" onclick="toggleDocuments(this)">
+                                <i class="fas fa-eye"></i> Ver documentos
+                            </button>
+                            <div class="documents-list" style="display: none;">
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 10/GA10-220501097-AA1-EV01.pdf" class="doc-link">
+                                    <i class="fas fa-file-pdf"></i> GA10-220501097-AA1-EV01
+                                </a>
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 10/GA10-220501097-AA2-EV01.pdf" class="doc-link">
+                                    <i class="fas fa-file-pdf"></i> GA10-220501097-AA2-EV01
+                                </a>
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 10/GA10-220501097-AA6-EV01.pdf" class="doc-link">
+                                    <i class="fas fa-file-pdf"></i> GA10-220501097-AA6-EV01
+                                </a>
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 10/GA10-220501097-AA7-EV01.pdf" class="doc-link">
+                                    <i class="fas fa-file-pdf"></i> GA10-220501097-AA7-EV01
+                                </a>
+                                <a href="../3 Fase  Ejecucion/actividad de proyecto 10/GA10-220501097-AA13-EV01.pdf" class="doc-link">
+                                    <i class="fas fa-file-pdf"></i> GA10-220501097-AA13-EV01
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Herramientas de Productividad -->
-            <div class="category">
-                <h2><i class="fas fa-tools"></i> Herramientas de Productividad</h2>
-                <div class="platform-cards">
-                    <div class="platform-card">
-                        <div class="card-icon">
-                            <i class="fab fa-google-drive" style="color: #4285F4;"></i>
-                        </div>
-                        <h3>Google Drive</h3>
-                        <p>Almacenamiento y documentos en la nube</p>
-                        <a href="https://drive.google.com/" target="_blank" class="btn">
-                            <i class="fas fa-external-link-alt"></i> Acceder
-                        </a>
+        <!-- Fase 4: Evaluación -->
+        <section class="phase-section" data-phase="fase4">
+            <div class="phase-header">
+                <h2><i class="fas fa-check-circle"></i> Fase 4: Evaluación</h2>
+                <p>Pruebas, validación y evaluación del proyecto</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3><i class="fas fa-folder"></i> Actividad Proyecto 9</h3>
+                        <span class="file-count">18+ archivos</span>
                     </div>
-
-                    <div class="platform-card">
-                        <div class="card-icon">
-                            <i class="fab fa-trello" style="color: #0079BF;"></i>
+                    <div class="project-content">
+                        <div class="materials-section">
+                            <h4><i class="fas fa-book"></i> Material de Aprendizaje</h4>
+                            <div class="material-links">
+                                <a href="../4 Fase  evaluacion/actividad de proyecto 9/material/Aplicación de pruebas de software" class="material-link">
+                                    <i class="fas fa-bug"></i> Aplicación de pruebas de software
+                                </a>
+                                <a href="../4 Fase  evaluacion/actividad de proyecto 9/material/Derechos fundamentales del trabajo" class="material-link">
+                                    <i class="fas fa-balance-scale"></i> Derechos fundamentales del trabajo
+                                </a>
+                                <a href="../4 Fase  evaluacion/actividad de proyecto 9/material/Fundamentos de la calidad del software" class="material-link">
+                                    <i class="fas fa-award"></i> Fundamentos de la calidad del software
+                                </a>
+                            </div>
                         </div>
-                        <h3>Trello</h3>
-                        <p>Organiza proyectos y tareas</p>
-                        <a href="https://trello.com/" target="_blank" class="btn">
-                            <i class="fas fa-external-link-alt"></i> Acceder
-                        </a>
-                    </div>
-
-                    <div class="platform-card">
-                        <div class="card-icon">
-                            <i class="fas fa-sticky-note" style="color: #FFD700;"></i>
+                        <div class="documents-section">
+                            <h4><i class="fas fa-file-alt"></i> Documentos y Evidencias</h4>
+                            <button class="toggle-docs" onclick="toggleDocuments(this)">
+                                <i class="fas fa-eye"></i> Ver documentos
+                            </button>
+                            <div class="documents-list" style="display: none;">
+                                <a href="../4 Fase  evaluacion/actividad de proyecto 9/Creación de informe con los resultados del.docx" class="doc-link">
+                                    <i class="fas fa-file-word"></i> Informe con resultados del proyecto
+                                </a>
+                                <a href="../4 Fase  evaluacion/actividad de proyecto 9/GA11-220501098-AA1-EV03.docx" class="doc-link">
+                                    <i class="fas fa-file-word"></i> GA11-220501098-AA1-EV03
+                                </a>
+                                <a href="../4 Fase  evaluacion/actividad de proyecto 9/Ga11-220501098-Aa2-Ev02.docx" class="doc-link">
+                                    <i class="fas fa-file-word"></i> Ga11-220501098-Aa2-Ev02
+                                </a>
+                                <a href="../4 Fase  evaluacion/actividad de proyecto 9/Presentación1.pdf" class="doc-link">
+                                    <i class="fas fa-file-pdf"></i> Presentación 1
+                                </a>
+                                <a href="../4 Fase  evaluacion/actividad de proyecto 9/Presentación2.pdf" class="doc-link">
+                                    <i class="fas fa-file-pdf"></i> Presentación 2
+                                </a>
+                                <a href="../4 Fase  evaluacion/actividad de proyecto 9/Póster de infografías con tablero.pdf" class="doc-link">
+                                    <i class="fas fa-file-pdf"></i> Póster de infografías
+                                </a>
+                            </div>
                         </div>
-                        <h3>Notion</h3>
-                        <p>Workspace todo-en-uno para notas</p>
-                        <a href="https://www.notion.so/" target="_blank" class="btn">
-                            <i class="fas fa-external-link-alt"></i> Acceder
-                        </a>
-                    </div>
-
-                    <div class="platform-card">
-                        <div class="card-icon">
-                            <i class="fas fa-video" style="color: #00BCD4;"></i>
-                        </div>
-                        <h3>Zoom</h3>
-                        <p>Videoconferencias y clases virtuales</p>
-                        <a href="https://zoom.us/" target="_blank" class="btn">
-                            <i class="fas fa-external-link-alt"></i> Acceder
-                        </a>
                     </div>
                 </div>
             </div>
@@ -221,11 +603,11 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Plataformas de Apoyo Educativo - Guillermo Cely</p>
-            <p>Organiza tu aprendizaje y alcanza tus metas académicas</p>
+            <p>&copy; 2024 Materiales de Apoyo - Guillermo Cely</p>
+            <p>Portafolio del Aprendiz - Análisis y Desarrollo de Software</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="materiales.js"></script>
 </body>
 </html>
