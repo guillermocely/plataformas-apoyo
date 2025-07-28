@@ -1,0 +1,18 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+# Permitir acceso a archivos con espacios y caracteres especiales
+RewriteRule ^(.*)$ - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+# Configuración para manejar rutas con espacios
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^materiales/documentos/(.+)$ materiales/documentos/$1 [L]
+
+# Configuración de tipos MIME
+AddType text/html .html
+AddType text/css .css
+AddType application/javascript .js
+
+# Configuración de codificación
+AddDefaultCharset UTF-8

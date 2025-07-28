@@ -1,0 +1,38 @@
+# Configuración para GitHub Pages
+title: "Materiales de Apoyo - Desarrollo de Software"
+description: "Portafolio del aprendiz con materiales de apoyo organizados por fases del desarrollo de software"
+author: "Guillermo Cely"
+url: "https://guillermocely.github.io"
+baseurl: "/plataformas-apoyo"
+
+# Configuración Jekyll
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Configuración de archivos
+include:
+  - _pages
+  - materiales
+
+# Excluir archivos innecesarios
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - .jekyll-metadata
+
+# Configuración de encoding
+encoding: utf-8
+
+# Configuración de timezone
+timezone: America/Bogota

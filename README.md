@@ -57,7 +57,26 @@ plataformas-apoyo/
 
 ## Visualización en GitHub
 
-Este proyecto está optimizado para visualizarse correctamente en GitHub Pages. El archivo principal es `index.html`.
+Este proyecto está optimizado para visualizarse correctamente en GitHub Pages.
+
+### 🌐 GitHub Pages
+- **URL del proyecto:** `https://[tu-usuario].github.io/plataformas-apoyo`
+- **Archivo principal:** `index.html`
+- **Configuración:** Incluye archivos `.nojekyll` y `_config.yml` para compatibilidad
+
+### 📋 Instrucciones para subir a GitHub:
+1. Crea un repositorio público en GitHub
+2. Sube todos los archivos del proyecto
+3. Ve a Settings > Pages
+4. Selecciona "Deploy from a branch"
+5. Elige "main" branch y "/ (root)"
+6. El sitio estará disponible en unos minutos
+
+### ✅ Verificación de funcionamiento:
+- Todos los enlaces internos usan rutas relativas
+- Los archivos CSS y JS están correctamente enlazados
+- Las imágenes y documentos mantienen su estructura de carpetas
+- Compatible con GitHub Pages sin configuración adicional
 
 ## Tecnologías Utilizadas
 
